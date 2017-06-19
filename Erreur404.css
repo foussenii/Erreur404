@@ -1,0 +1,33 @@
+@import "compass/reset";
+@import url("https://fonts.googleapis.com/css?family=Oswald");
+body{ text-align:center;
+background-image: url("shiaf.gif");
+}
+h1,h2{
+  font-family: 'Vibur', cursive;
+font-family: 'Boogaloo', cursive;
+color:white;
+}
+a{  text-decoration: none;
+  color: white;
+}
+
+p{
+  font-family: 'Vibur', cursive;
+  color:white;
+}
+.btn{
+
+  border: 1px white solid;
+  padding: 10px;
+
+   border-radius: 40px;
+
+
+}
+.haut{
+  position: absolute;
+top: 30%; left: 40%;
+
+margin-left: -7.5rem;
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="Erreur404.css">
+    <link href="https://fonts.googleapis.com/css?family=Vibur" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Boogaloo|Vibur" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="jquery.inview.min.js"></script>
+</head>
+
+<body>
+    <div class="haut">
+
+
+        <header>
+            <h2>ERROR</h2>
+            <h1 class="number">404</h1>
+
+            <h2>La page que vous cherchez n'existe pas...</h2>
+        </header>
+        <main>
+            <p>Oups, mauvaise nouvelle...</p>
+            <p>Mais, ne désésperez pas, nous vous téléportons sur notre page d'accueil.</p>
+
+            <a class="btn" href="https://codepen.io">Vers la page d'accueil</a>
+        </main>
+        <footer>
+            <p>&copy; 2017 | <a href="https://codepen.io">Vers l'Accueil</a></p>
+        </footer>
+        <script type="text/javascript">
+            var element = $("h1.number")
+            var numero = element.text();
+
+            function numberAnimation() {
+                element.prop('contador', 0).animate({
+                    contador: numero
+                }, {
+                    duration: 1200,
+                    easing: 'swing',
+                    step: function(now) {
+                        // Verificar si es decimal o no
+                        var numText = (numero % 1 !== 0 ? now.toFixed(1) : Math.round(now));
+                        element.text(numText);
+                    }
+                });
+            }
+
+            $(document).ready(function() {
+                numberAnimation();
+                $("button").click(function() {
+                    numberAnimation();
+                });
+            });
+        </script>
+    </div>
+</body>
+
+</html>
